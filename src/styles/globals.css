@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* TEST: If you see a red border, CSS is loading */
+body {
+  border: 5px solid red !important;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
