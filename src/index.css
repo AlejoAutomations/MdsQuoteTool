@@ -421,12 +421,12 @@
   }
 
   * {
-    border-color: oklch(.922 0 0);
+    border-color: hsl(var(--border));
   }
 
   body {
-    background-color: oklch(1 0 0);
-    color: oklch(.145 0 0);
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -1702,12 +1702,6 @@
 
 body {
   border: 5px solid red !important;
-}
-
-.test-tailwind-processing {
-  background-color: var(--color-blue-500);
-  padding: calc(var(--spacing) * 4);
-  color: var(--color-white);
 }
 
 @media print {

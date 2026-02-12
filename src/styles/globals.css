@@ -1,15 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* TEST: If you see a red border, CSS is loading */
 body {
   border: 5px solid red !important;
-}
-
-/* TEST 2: If backdrop-blur works, Tailwind is processing */
-.test-tailwind-processing {
-  @apply bg-blue-500 text-white p-4;
 }
 
 @layer base {
@@ -39,10 +32,11 @@ body {
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
