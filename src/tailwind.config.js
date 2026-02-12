@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./index.html",
     "./*.{js,ts,jsx,tsx}",
@@ -8,22 +8,60 @@ export default {
     "./data/**/*.{js,ts,jsx,tsx}",
   ],
   safelist: [
-    // Force include gradient and backdrop classes
+    // Gradient directions
     'bg-gradient-to-br',
-    'from-blue-50',
-    'via-indigo-50',
-    'to-purple-50',
+    'bg-gradient-to-r',
+    
+    // QuoteForm gradients
+    'from-pink-200',
+    'via-blue-100',
+    'to-cyan-200',
+    
+    // QuoteTemplate gradients - Loncin (red)
+    'from-white',
+    'via-white',
+    'to-red-700',
+    'from-red-600',
+    'to-red-700',
+    
+    // QuoteTemplate gradients - Voge (yellow)
+    'to-yellow-400',
+    'from-yellow-400',
+    'to-yellow-500',
+    'via-gray-100',
+    'to-black',
+    
+    // QuoteTemplate - other
+    'from-gray-50',
+    'to-gray-100',
+    'from-black',
+    'from-70%',
+    
+    // Backdrop blur
+    'backdrop-blur-md',
     'backdrop-blur-xl',
     'backdrop-saturate-150',
+    
+    // White opacity variants
+    'bg-white/60',
     'bg-white/70',
     'bg-white/80',
     'bg-white/90',
-    // Common classes
+    'hover:bg-white/80',
+    
+    // Rounded corners
+    'rounded-[2.5rem]',
+    'rounded-2xl',
+    
+    // Full color pattern match
     {
       pattern: /^(bg|text|border|from|via|to)-(slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(50|100|200|300|400|500|600|700|800|900)$/,
     },
     {
-      pattern: /^backdrop-(blur|saturate|brightness|contrast|grayscale|hue-rotate|invert|opacity|sepia)-(sm|md|lg|xl|2xl|3xl)$/,
+      pattern: /^backdrop-(blur|saturate|brightness|contrast)-(sm|md|lg|xl|2xl|3xl)$/,
+    },
+    {
+      pattern: /^(bg|text|border)-(white|black)\/(10|20|30|40|50|60|70|80|90|95)$/,
     },
   ],
   theme: {

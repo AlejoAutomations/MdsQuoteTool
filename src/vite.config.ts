@@ -12,6 +12,9 @@ export default defineConfig(({command}) => ({
       '@': path.resolve(__dirname, './'),
     },
   },
+  css: {
+    postcss: './postcss.config.js',
+  },
   build: {
     outDir: 'dist',
     emptyOutDir: true,
