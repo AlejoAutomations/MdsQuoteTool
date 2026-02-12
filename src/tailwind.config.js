@@ -2,10 +2,29 @@
 export default {
   content: [
     "./index.html",
-    "./main.tsx",
-    "./App.tsx",
+    "./*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./data/**/*.{js,ts,jsx,tsx}",
+  ],
+  safelist: [
+    // Force include gradient and backdrop classes
+    'bg-gradient-to-br',
+    'from-blue-50',
+    'via-indigo-50',
+    'to-purple-50',
+    'backdrop-blur-xl',
+    'backdrop-saturate-150',
+    'bg-white/70',
+    'bg-white/80',
+    'bg-white/90',
+    // Common classes
+    {
+      pattern: /^(bg|text|border|from|via|to)-(slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(50|100|200|300|400|500|600|700|800|900)$/,
+    },
+    {
+      pattern: /^backdrop-(blur|saturate|brightness|contrast|grayscale|hue-rotate|invert|opacity|sepia)-(sm|md|lg|xl|2xl|3xl)$/,
+    },
   ],
   theme: {
     extend: {
