@@ -7,6 +7,11 @@ body {
   border: 5px solid red !important;
 }
 
+/* TEST 2: If backdrop-blur works, Tailwind is processing */
+.test-tailwind-processing {
+  @apply bg-blue-500 text-white p-4;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

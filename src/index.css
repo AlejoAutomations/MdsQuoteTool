@@ -1704,6 +1704,12 @@ body {
   border: 5px solid red !important;
 }
 
+.test-tailwind-processing {
+  background-color: var(--color-blue-500);
+  padding: calc(var(--spacing) * 4);
+  color: var(--color-white);
+}
+
 @media print {
   @page {
     size: A4;
